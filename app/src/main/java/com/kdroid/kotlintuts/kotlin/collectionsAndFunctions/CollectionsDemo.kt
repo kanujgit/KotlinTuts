@@ -1,5 +1,8 @@
 package com.kdroid.kotlintuts.kotlin.collectionsAndFunctions
 
+import android.os.Build
+import androidx.annotation.RequiresApi
+
 
 /**
  * FILTER
@@ -12,9 +15,17 @@ package com.kdroid.kotlintuts.kotlin.collectionsAndFunctions
  * ALL
  * Return that satisfy the conditions
  */
+@RequiresApi(Build.VERSION_CODES.N)
 fun main(args: Array<String>) {
 
     var myNumber: List<Int> = listOf(2, 3, 4, 5, 90)
+    var myNumberMutableList: List<Int> = mutableListOf(2, 3, 4, 5, 90)
+
+
+    for (Int in myNumberMutableList) {
+        println(myNumberMutableList)
+    }
+
     val myFilterList = myNumber.filter { it > 3 }   // or item -> item<3
     for (num in myFilterList) {
         //  println(num)
@@ -42,4 +53,16 @@ fun main(args: Array<String>) {
 
 
     //predicates
+
+    val numberSet = setOf<String>("22", "23")
+    numberSet.forEach { println(it) }
+
+    // map
+
+    // no duplicate key
+    val numberMap = mapOf<String, String>("1" to "balal","2" to "anuj")
+    println(numberMap)
+
+    numberMap.forEach { (t, u) -> println("$t and $u") }
+
 }

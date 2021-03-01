@@ -1,5 +1,19 @@
 package com.kdroid.kotlintuts.kotlin.scoperdunctions
 
+
+/**
+ * +-------------------------------------------+
+ * Function | Context Object |  Return Value   |
+ *+--------------------------------------------+
+ * let            it            lambda result  |
+ * run            this          lambda result  |
+ * with           this          lambda result  |
+ * apply          this          Context Object |
+ * also           it            Context Object |
+ *+--------------------------------------------+
+ */
+
+//we use with when we have lot of property   and function
 fun main(args: Array<String>) {
 
     /**
@@ -12,6 +26,8 @@ fun main(args: Array<String>) {
     println(person.name)
     //using 'with'
      val  ageAfter:Int = with(person){
+         person.age= 10
+         name= "anuj kumar"
         println("using with")
         println(age)
         println(name)

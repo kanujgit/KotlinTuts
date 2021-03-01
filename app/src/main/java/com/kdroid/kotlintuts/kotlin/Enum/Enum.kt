@@ -1,11 +1,11 @@
 package com.kdroid.kotlintuts.kotlin.Enum
 
 // can'a add abstract class
-interface doColor {
+interface DoColor {
     fun doColor()
 }
 
-enum class Color(val colorName: String) : doColor {
+enum class Color(val colorName: String) : DoColor {
     RED("Red") {
         override fun doColor() {
             println("Color is red")

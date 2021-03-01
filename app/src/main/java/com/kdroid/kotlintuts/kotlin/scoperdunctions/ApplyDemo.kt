@@ -1,5 +1,8 @@
 package com.kdroid.kotlintuts.kotlin.scoperdunctions
 
+// initial configuration of object
+//you can use also for initial
+// but you can use it
 fun main(args: Array<String>) {
 
     var apply = ApplyDemo().apply {

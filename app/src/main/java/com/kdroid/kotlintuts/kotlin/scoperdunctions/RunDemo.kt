@@ -7,6 +7,22 @@ package com.kdroid.kotlintuts.kotlin.scoperdunctions
  * Property 2: The return value is the 'lambda'
  * Combinations of [with] and [let] functions
  */
+
+
+/**
+ * +-------------------------------------------+
+ * Function | Context Object |  Return Value   |
+ *+--------------------------------------------+
+ * let            it            lambda result  |
+ * run            this          lambda result  |
+ * with           this          lambda result  |
+ * apply          this          Context Object |
+ * also           it            Context Object |
+ *+--------------------------------------------+
+ */
+
+// not define the custom name of obeject
+//but in let we define the custom object
 class RunDemo {
     var name: String = "anuj"
     var age: Int = 10

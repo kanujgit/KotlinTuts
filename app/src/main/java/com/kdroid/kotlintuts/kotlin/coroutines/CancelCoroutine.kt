@@ -23,6 +23,6 @@ fun main(args: Array<String>) = runBlocking {
 
     }
     delay(10)
-    job.cancelAndJoin()
+    job.join()
     println("\n main programm terminate ${Thread.currentThread()}")
 }
