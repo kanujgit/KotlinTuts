@@ -28,7 +28,7 @@ class Student {
 fun main(args: Array<String>) {
     val student = Student()
     // use of lazy
-    //    student.heavy
+        student.heavy
 
     // use of observable
    // student.marks = 55

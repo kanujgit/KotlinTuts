@@ -5,7 +5,7 @@ import java.math.BigInteger
 //find fab index number
 fun main(args: Array<String>) {
     //fibonacci series 0,1,1,2,,3,5,8,13,21,34......
-    println(getFibonacciNumber(10, BigInteger("0"),BigInteger("1")))
+    println(getFibonacciNumber(10000, BigInteger("0"),BigInteger("1")))
 }
 
 tailrec fun getFibonacciNumber(n:Int, a:BigInteger, b:BigInteger):BigInteger{

@@ -32,7 +32,7 @@ public class InnovativePrinting {
         System.out.print("\nPrinting pattern : \n");
         for (String[] x : twoD) {
             for (String y : x) {
-                System.out.print(y + "        ");
+                System.out.print(y);
             }
             System.out.println();
         }
