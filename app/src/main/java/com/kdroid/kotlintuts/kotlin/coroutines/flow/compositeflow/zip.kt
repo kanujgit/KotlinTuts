@@ -8,7 +8,7 @@ fun main() {
     runBlocking {
         //zip()
         //combineOperator()
-        catchException()
+       // catchException()
     }
 }
 
