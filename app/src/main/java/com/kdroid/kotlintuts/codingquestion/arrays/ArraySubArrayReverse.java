@@ -1,4 +1,4 @@
-package com.kdroid.kotlintuts.codingquestion;
+package com.kdroid.kotlintuts.codingquestion.arrays;
 
 public class ArraySubArrayReverse {
     public static void main(String[] args) {

@@ -2,6 +2,21 @@ package com.kdroid.kotlintuts;
 
 import java.lang.reflect.Field;
 
+class BOB {
+    int i;
+
+    protected void bobMethod() {
+    }
+}
+
+class BOB2 extends BOB {
+
+    @Override
+    protected void bobMethod() {
+        super.bobMethod();
+    }
+}
+
 public class Test {
 
     /*public static void main(String[] args) {
@@ -47,23 +62,25 @@ public class Test {
 //}
 
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-        String s1 = "java";
-        String s2 = "java";
-        String s3 = new String("java");
-        String s6  =  "ja" + "va";
-
-        char ch[] = {'j', 'a', 'v', 'a'};
-        String s4 = new String(ch);//converting char array to string
-        String s5 = new String("java");
+        BOB bob;
+        BOB2 bob2 = new BOB2();
+//        String s1 = "java";
+//        String s2 = "java";
+//        String s3 = new String("java");
+//        String s6  =  "ja" + "va";
+//
+//        char ch[] = {'j', 'a', 'v', 'a'};
+//        String s4 = new String(ch);//converting char array to string
+//        String s5 = new String("java");
 
 //        System.out.println(showInternalCharArrayHashCode(s1));
 //        System.out.println(showInternalCharArrayHashCode(s3));
 //        System.out.println(showInternalCharArrayHashCode(s6));
-        System.out.println(System.identityHashCode(s1));
-        System.out.println(System.identityHashCode(s4));
+//        System.out.println(System.identityHashCode(s1));
+//        System.out.println(System.identityHashCode(s4));
 
 
-        System.out.println(s1 == s6);
+        //      System.out.println(s1 == s6);
 //
 //        System.out.println(s1.hashCode() + "\n" + s2.hashCode() + "\n" + s3.hashCode() + "\n" + s4.hashCode() + "\n" + s5.hashCode() + "\n"+ "\n" + s6.hashCode() + "\n");
 
@@ -75,7 +92,6 @@ public class Test {
         value.setAccessible(true);
         return value.get(s).hashCode();
     }
-
 
 
 // Java program to compare performance

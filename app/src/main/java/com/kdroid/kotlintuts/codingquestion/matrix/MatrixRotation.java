@@ -1,4 +1,4 @@
-package com.kdroid.kotlintuts.codingquestion;
+package com.kdroid.kotlintuts.codingquestion.matrix;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.SoftReference;

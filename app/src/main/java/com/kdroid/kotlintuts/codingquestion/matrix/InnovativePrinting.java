@@ -1,4 +1,4 @@
-package com.kdroid.kotlintuts.codingquestion;
+package com.kdroid.kotlintuts.codingquestion.matrix;
 
 import java.util.Scanner;
 
