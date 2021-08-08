@@ -3,110 +3,56 @@ package com.kdroid.kotlintuts.kotlin.coroutines
 import kotlinx.coroutines.*
 
 
-fun main(args: Array<String>) = runBlocking  {
+ fun main(args: Array<String>) = runBlocking{
+
+//===========================
+//    println("A")
 //    launch {
-//        delay(200L)
-//        println("Task execute over run blocking ")
-//    }.invokeOnCompletion { "task is complete over run blocking" }
-//    coroutineScope {
-//        launch {
-//            delay(50L)
-//            println("Task from nested launch")
-//        }.invokeOnCompletion {
-//            println("nested coroutine is complete")
-//            cancel()
-//
-//        }
-//        delay(100L)
-//        println("Task from coroutine scope")
+//        a()
+//        b()
+//        c()
+//        println("C")
 //    }
-//
-//    println("Coroutine scope is over") // This line is not printed until the nested
-//
-//    val job: Job = launch {
-//        launch {
-//            println("First job started")
-//            delay(3000)
-//            println("First job finished")
-//        }.invokeOnCompletion {
-//            println("First job completed!")
-//        }
-//
-//        launch {
-//            println("Second job started")
-//            delay(4000)
-//            println("Second job finished")
-//        }.invokeOnCompletion {
-//            println("Second job completed!")
-//        }
-//
-//        launch {
-//            println("Third job started")
-//            delay(5000)
-//            println("Third job finished")
-//        }.invokeOnCompletion {
-//            println("Third job completed!")
-//        }
-//    }
-//
-//    delay(1000)
-//    job.children.elementAt(2).cancel()
-//    delay(750)
-//    job.children.elementAt(0).cancel()
-//    delay(500)
-//    job.children.elementAt(0).cancel()
+//    println("B")
 
+    //=============
+   val job= launch {
 
-//    val job = launch {
-//        println("Coroutine start")
-//        launch {
-//            println("Child coroutine start")
-//            delay(1000)
-//            println("Child coroutine end")
-//        }
-//        println("Coroutine end")
-//    }
-//    println("Join")
-//    job.join()
-//    println("Done")
-
-
-
-
-
-
-    launch {
-        println("1")
+       function1()
+       val  resultOne = withContext(Dispatchers.IO) {
+           function1() }
+        val resultTwo = withContext(Dispatchers.IO) { function2() }
     }
-
-    coroutineScope {
-        launch {
-            println("2")
-        }
-
-        println("3")
-    }
-
-    coroutineScope {
-        launch {
-            println("4")
-        }
-
-        println("5")
-    }
-
-    launch {
-        println("6")
-    }
-
-    for (i in 7..100) {
-        println(i.toString())
-    }
-
-    println("101")
-
-
 }
+
+fun function1() {
+    for (i in 1..1000000)
+    print(".")
+    println()
+}
+
+fun function2() {
+    println("function2")
+}
+
+
+
+
+suspend fun a(){
+//    delay(5000)
+    println("aa")
+}
+
+suspend fun b(){
+   // delay(10000)
+    println("bb")
+}
+suspend fun c(){
+       // delay(15000)
+    println("cc")
+}
+
+
 
 suspend fun launchCoroutineScope() {
     coroutineScope {
@@ -123,6 +69,8 @@ suspend fun launchCoroutineScope() {
         job.join()
         println("Done")
     }
+
+
 
 
 }
