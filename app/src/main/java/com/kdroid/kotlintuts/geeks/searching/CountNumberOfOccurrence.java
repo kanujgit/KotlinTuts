@@ -3,7 +3,7 @@ package com.kdroid.kotlintuts.geeks.searching;
 public class CountNumberOfOccurrence {
     public static void main(String[] args) {
 
-        int arr[] = {0, 0, 0, 1, 1, 1,1};
+        int [] arr= { 1};
         int x = 1;
         findOccurrence(arr, x);
     }

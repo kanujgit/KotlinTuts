@@ -30,9 +30,7 @@ import java.io.InputStreamReader;
  * Explanation: 19 is a lucky number
  */
 
-class ExceptionHandle {
 
-}
 
 public class LuckyNumber {
     public static void main(String[] args) throws Exception {

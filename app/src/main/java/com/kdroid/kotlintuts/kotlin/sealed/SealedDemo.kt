@@ -10,7 +10,6 @@ sealed class Data {
     data class Success(val data: String) : Data()
     data class Failure(val data: String) : Data()
     object Loading : Data()
-
 }
 
 
