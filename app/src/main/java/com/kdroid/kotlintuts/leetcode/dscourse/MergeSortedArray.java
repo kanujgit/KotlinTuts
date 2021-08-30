@@ -12,12 +12,17 @@ public class MergeSortedArray {
     }
 
     private static void mergeArrays(int[] num1, int n1, int[] num2, int n2) {
-        int index;
-        for (int i = n1; i < n1 + n2; i++) {
-            num1[i] = num2[i - n2];
+        if (num1 == null || num2 == null || num1.length != n1 + n2) return;
+        int i = n1 - 1;
+        int j = n2 - 1;
+        int t = n1 + n2 - 1;
+        while (j >= 0) {
+            if(i>=0 && num1[i]>num2[j]){
+                num1[t--] = num1[i--];
+            }else {
+                num1[t--] = num2[j--];
+            }
         }
-
-        Arrays.sort(num1);
         System.out.println(Arrays.toString(num1));
     }
 }

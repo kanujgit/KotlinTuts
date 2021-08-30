@@ -28,16 +28,32 @@ package com.kdroid.kotlintuts.geeks.recursion;
  * 1 <= n <= 20
  */
 public class FibonacciUsingRecursion {
+    static int n1 =0;
+    static int n2 =1;
+    static int n3 =0;
+
     public static void main(String[] args) {
-        int n =5;
-        System.out.println(findNthFibonacci(n));
+        int n =10;
+        printAllFabbonacciNumber(n-2);
     }
 
-    private static int findNthFibonacci(int n) {
-        if (n == 0 || n == 1) {
-            return n;
+    private static void printAllFabbonacciNumber(int n) {
+        if(n>0){
+            n3= n1+n2;
+            n1 = n2;
+            n2= n3;
+            System.out.println(n3);
+            printAllFabbonacciNumber(n-1);
         }
-        return (findNthFibonacci(n - 1) + findNthFibonacci(n - 2));
+
     }
+
+//    private static int findNthFibonacci(int n) {
+//        if (n == 0 || n == 1) {
+//            return n;
+//        }
+//        return (findNthFibonacci(n - 1) + findNthFibonacci(n - 2));
+//    }
+
 
 }
