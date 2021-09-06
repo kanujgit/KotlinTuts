@@ -9,8 +9,9 @@ package com.kdroid.kotlintuts.geeks.array;
  */
 public class StockProfitSolution {
     public static void main(String[] args) {
-        int arr[] = {1, 5, 3, 8, 12};
+        int arr[] = {7,1,5,3,6,4};
         System.out.println(calculatePrice(arr, arr.length));
+        maxProfit(arr,arr.length);
     }
 
     private static int calculatePrice(int[] arr, int n) {
@@ -21,5 +22,14 @@ public class StockProfitSolution {
             }
         }
         return profit;
+    }
+    private static void maxProfit(int[] arr,int n){
+        int profit =0;
+        int min = arr[0];
+        for (int i = 0; i < n; i++) {
+            profit = Math.max((arr[i]-min),profit);
+            min   = Math.min(arr[i],min);
+        }
+        System.out.println("Profit: "+ profit);
     }
 }

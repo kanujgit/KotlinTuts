@@ -1,4 +1,4 @@
-package com.kdroid.kotlintuts.codingquestion;
+package com.kdroid.kotlintuts.android.lrucache;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -14,6 +14,9 @@ public class LRUCacheDemo {
         ca.refer(1);
         ca.refer(4);
         ca.refer(5);
+        ca.refer(5);
+        ca.refer(1);
+
         ca.display();
     }
 
