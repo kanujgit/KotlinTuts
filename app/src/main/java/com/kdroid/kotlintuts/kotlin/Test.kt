@@ -2,30 +2,16 @@ package com.kdroid.kotlintuts.kotlin
 
 
 fun main(args: Array<String>) {
-    // 1
-    val lambda1: () -> Unit = { println("Hello, world") }
-    // 2
-    val lambda2 = { println("Hello, world") }
-    // 3
-    val lambda3 = { print("as")}
-    // 4
-        Lambda().l4(1,2)
-        Lambda().l2("anuj")
 
-
-
+    val emp1 = Employee("a")
+    val emp2 = Employee("a")
+    println(emp1 == emp2)      //false
+    println(emp1.equals(emp2)) //false
+    println(emp1 === emp2)     //false
 }
-class Lambda{
 
-    val  l4 : (Int,Int) -> Int = { param1:Int,param2:Int ->
-        println(param1)
-        println(param2)
-        println(param1+param2)
-        param1+param2
-    }
+data class Employee(val name: String) {
 
-
-    val  l2:(String) -> Unit =  { name -> println(name)}
 }
 
 

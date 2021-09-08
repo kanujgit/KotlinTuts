@@ -1,15 +1,21 @@
 package com.kdroid.kotlintuts;
 
+
 public class Test {
-
-    public static void main(String[] args) {
-        int a =9;
-        int b=2;
-        int c =a|b;
-        int d =a & b;
-        System.out.println(c +" "+d);
-
+    static {
+        System.out.println("static");
     }
 
+    {
+        System.out.println("block");
+    }
+
+    public Test() {
+        System.out.println("A");
+    }
+
+    public static void main(String[] args) {
+        Test a = new Test();
+    }
 }
 

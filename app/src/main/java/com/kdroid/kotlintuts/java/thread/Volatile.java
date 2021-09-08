@@ -1,4 +1,4 @@
-package com.kdroid.kotlintuts.java;
+package com.kdroid.kotlintuts.java.thread;
 
 public class Volatile {
 

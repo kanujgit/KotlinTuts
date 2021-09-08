@@ -5,6 +5,8 @@ import kotlinx.coroutines.*
 
  fun main(args: Array<String>) = runBlocking{
 
+    // launchCoroutineScope()
+     function2("1")
 //===========================
 //    println("A")
 //    launch {
@@ -16,13 +18,13 @@ import kotlinx.coroutines.*
 //    println("B")
 
     //=============
-   val job= launch {
-
-       function1()
-       val  resultOne = withContext(Dispatchers.IO) {
-           function1() }
-        val resultTwo = withContext(Dispatchers.IO) { function2() }
-    }
+//   val job= launch {
+//
+//       function1()
+//       val  resultOne = withContext(Dispatchers.IO) {
+//           function1() }
+//        val resultTwo = withContext(Dispatchers.IO) { function2() }
+//    }
 }
 
 fun function1() {
@@ -31,8 +33,9 @@ fun function1() {
     println()
 }
 
-fun function2() {
-    println("function2")
+fun function2(name:String) {
+    var name= "$name kumar"
+    println(name)
 }
 
 
@@ -55,19 +58,20 @@ suspend fun c(){
 
 
 suspend fun launchCoroutineScope() {
+    var job1: Job? = null
+    var job2:Job? = null
     coroutineScope {
-        val job = launch {
-            println("Coroutine start")
-            launch {
-                println("Child coroutine start")
-                delay(1000)
+         launch {
+            job1= launch {
+                delay(10000)
                 println("Child coroutine end")
             }
-            println("Coroutine end")
+            job2 =launch {
+                job1!!.join()
+                println("coroutine 2 start")
+            }
         }
-        println("Join")
-        job.join()
-        println("Done")
+
     }
 
 
