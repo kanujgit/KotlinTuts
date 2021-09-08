@@ -11,7 +11,7 @@ android {
 //        enabled = true
 //    }
     defaultConfig {
-        applicationId "com.kdroid.kotlintuts"
+        applicationId "com.kotlintuts"
         minSdk 21
         targetSdk 31
         versionCode 1
