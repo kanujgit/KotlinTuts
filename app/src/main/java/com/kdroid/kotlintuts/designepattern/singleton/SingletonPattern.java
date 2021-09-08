@@ -22,7 +22,8 @@ class Singleton {
     public static synchronized Singleton getInstance() {
         if (INSTANCE == null) {
             synchronized (Singleton.class) {
-                INSTANCE = new Singleton();
+                if (INSTANCE == null)  // double check
+                    INSTANCE = new Singleton();
             }
         }
         return INSTANCE;
