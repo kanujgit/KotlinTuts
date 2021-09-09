@@ -1,4 +1,4 @@
-package com.operators
+package com.rxandorid.operators
 
 import android.os.Bundle
 import android.util.Log
