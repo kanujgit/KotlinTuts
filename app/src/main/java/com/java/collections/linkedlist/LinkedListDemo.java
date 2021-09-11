@@ -1,4 +1,4 @@
-package com.codingquestion.linkedlist;
+package com.java.collections.linkedlist;
 
 public class LinkedListDemo {
     Node head;

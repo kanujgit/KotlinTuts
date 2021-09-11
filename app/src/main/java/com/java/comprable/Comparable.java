@@ -1,4 +1,4 @@
-package com.java;
+package com.java.comprable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,27 +16,29 @@ public class Comparable {
         list.add(new Movie("Star Wars", 8.7, 1977));
         list.add(new Movie("Empire Strikes Back", 8.8, 1980));
         list.add(new Movie("Return of the Jedi", 8.4, 1983));
-        Collections.sort(list);
+
+        list.forEach(System.out::println);
+
+        Collections.sort(list, (s1, s2) ->
+                s2.getYear() > s1.getYear() ? -1 :
+                        s1.getYear() < s2.getYear() ? 1 : 0);
 
         System.out.println("Movies after sorting : ");
-        for (Movie movie : list) {
-            System.out.println(movie.getName() + " " +
-                    movie.getRating() + " " +
-                    movie.getYear());
-        }
+
+        list.forEach(System.out::println);
+
     }
 }
 
-class Movie implements java.lang.Comparable<Movie> {
+class Movie {
     private double rating;
     private String name;
     private Integer year;
 
     // Used to sort movies by year
-    public int compareTo(Movie m) {
-        System.out.println(year + "//" + m.year+"// "+ year.compareTo(m.year));
-        return year.compareTo(m.year);
-    }
+//    public int compareTo(Movie m) {
+//        return year.compareTo(m.year);
+//    }
 
 
     // Constructor
@@ -57,6 +59,15 @@ class Movie implements java.lang.Comparable<Movie> {
 
     public int getYear() {
         return year;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "rating=" + rating +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                '}';
     }
 }
 

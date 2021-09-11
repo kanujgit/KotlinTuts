@@ -37,9 +37,9 @@ fun main(args: Array<String>) {
 //    println("student marks ${student.marks}")
 
     // use of vetoable
-    student.age = 10
-    println("student age ${student.age}")
-    student.age = 15
-    println("student age ${student.age}")
+//    student.age = 10
+//    println("student age ${student.age}")
+//    student.age = 15
+//    println("student age ${student.age}")
 
 }
