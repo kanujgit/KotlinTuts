@@ -1,16 +1,37 @@
 package com.java.inner;
 
+interface AInnerInterface {
+    public void show();
+}
+
 public class InnerClaasDemo {
     public static void main(String[] args) {
         A a = new A();
-        //A.Ainner ainner = a.new Ainner();
-        System.out.println(A.Ainner.j);
+        AInnerInterface aInnerInterface = () -> System.out.println("show");
+        // aInnerInterface.show();
+        A aa = new A() {
+            public void show() {
+                System.out.println("print AA");
+            }
+        };
+        aa.show();
+
 
     }
+
+
 }
-class A{
-    int i=9;
-    static class Ainner{
-       static int j=10;
+
+class A {
+    public void show() {
+        System.out.println("show");
+    }
+
+    //int i=9;
+    class Ainner {
+        //  int j=10;
+        public void show() {
+            System.out.println("show");
+        }
     }
 }
