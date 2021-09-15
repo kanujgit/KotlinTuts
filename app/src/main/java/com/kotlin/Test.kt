@@ -1,7 +1,12 @@
 package com.kotlin
 
 
+private class xyx {
+
+}
+
 fun main(args: Array<String>) {
+
 
 //    val emp1 = Employee("a")
 //    val emp2 = Employee("a")
@@ -11,12 +16,15 @@ fun main(args: Array<String>) {
 
     //Employee("a").printF("a")
 
+
     val list = listOf("one", "two", "three", "four")
     var list1 = list
     println(list1)
     println(list1)
     println(list)
 
+
+    var x = lazy { 20 }
 
 
 }
