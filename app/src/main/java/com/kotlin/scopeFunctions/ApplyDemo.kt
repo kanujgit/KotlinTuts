@@ -1,4 +1,4 @@
-package com.kotlin.scoperdunctions
+package com.kotlin.scopeFunctions
 
 // initial configuration of object
 //you can use also for initial

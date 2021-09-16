@@ -1,4 +1,4 @@
-package com.kotlin.scoperdunctions
+package com.kotlin.scopeFunctions
 
 data class PersonData(var name: String, var age: Int, var job: String) {
 
@@ -34,8 +34,8 @@ fun main(args: Array<String>) {
         printData()
     }
     // check null pointer exception
-    personData?.let {
-        personData.name= "anuj"
+    personData.let {
+        personData.name = "anuj"
         personData.printData()
     }
 
@@ -50,5 +50,4 @@ fun main(args: Array<String>) {
     }.printData()
 }
 
-class AllFunction {
-}
+class AllFunction

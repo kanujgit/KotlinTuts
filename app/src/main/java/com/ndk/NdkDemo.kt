@@ -1,5 +1,6 @@
 package com.ndk
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlintuts.databinding.NdkLayoutBinding
@@ -9,10 +10,11 @@ class NdkDemo : AppCompatActivity() {
 
     companion object {
         init {
-            System.loadLibrary("native-lib");
+            System.loadLibrary("native-lib")
         }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = NdkLayoutBinding.inflate(layoutInflater)

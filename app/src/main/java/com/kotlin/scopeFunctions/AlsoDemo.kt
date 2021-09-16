@@ -1,4 +1,4 @@
-package com.kotlin.scoperdunctions
+package com.kotlin.scopeFunctions
 
 fun main(args: Array<String>) {
     /**
@@ -25,5 +25,4 @@ fun main(args: Array<String>) {
 
 }
 
-class AlsoDemo {
-}
+class AlsoDemo

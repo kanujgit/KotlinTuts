@@ -1,4 +1,4 @@
-package com.kotlin.scoperdunctions
+package com.kotlin.scopeFunctions
 
 
 /**

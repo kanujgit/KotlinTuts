@@ -1,4 +1,4 @@
-package com.kotlin.scoperdunctions
+package com.kotlin.scopeFunctions
 
 /**
  * +-------------------------------------------+
@@ -18,8 +18,7 @@ package com.kotlin.scoperdunctions
  * Property 2: Return value is the 'lambda result'
  * null safety
  */
-class LetDemo {
-}
+class LetDemo
 
 fun main(args: Array<String>) {
 //    val name: String? = "null"
@@ -36,7 +35,7 @@ fun main(args: Array<String>) {
     var name:String?=null
     name = "anuj"
     // also checking for null safety
-    val length = name?.let{
+    val length = name.let {
         it.reversed()
 //        println(it.length)
     }
