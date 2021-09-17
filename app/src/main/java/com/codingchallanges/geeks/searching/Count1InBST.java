@@ -4,13 +4,12 @@ import com.codingchallanges.geeks.array.UtilsClass;
 
 public class Count1InBST {
     public static void main(String[] args) {
-        int arr[] = {0, 0, 0, 0, 0, 0, 0,1,1,1,1,2,2,2};
-        int x = 1;
-        findOccurrence(arr, x);
+        int[] arr = {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2};
+        int x = 0;
+        // findOccurrence(arr, x);
 
 
-
-        int changeArr[] = new int[3];
+        int[] changeArr = new int[3];
         for (int i = 0; i < 3; i++) {
             changeArr[i] = calculateNumberChangingPosition(arr, i);
         }
@@ -25,6 +24,7 @@ public class Count1InBST {
 
     private static void findOccurrence(int[] arr, int x) {
         int firstOne = findFirstOccurrence(arr, x);
+        System.out.println("First occ " + firstOne);
         if (firstOne == -1) {
             System.out.println("No match");
             return;

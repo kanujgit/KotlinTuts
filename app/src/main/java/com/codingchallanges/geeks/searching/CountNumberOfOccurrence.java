@@ -3,7 +3,7 @@ package com.codingchallanges.geeks.searching;
 public class CountNumberOfOccurrence {
     public static void main(String[] args) {
 
-        int [] arr= { 1};
+        int[] arr = {1, 1, 1, 1, 1, 0, 0, 0, 0};
         int x = 1;
         findOccurrence(arr, x);
     }
