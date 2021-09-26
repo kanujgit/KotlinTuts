@@ -8,20 +8,37 @@ val myVal by lazy {
     "wol"
     "world"
 }
+
+class TestClass(var a: Int = 10)
+
+lateinit var test: TestClass
+
+
 fun main(args: Array<String>) {
 
-    println(myVal)
-    println(myVal)
-//    val emp1 = Employee("a")
-//    val emp2 = Employee("a")
-//    println(emp1 == emp2)      //false
-//    println(emp1.equals(emp2)) //false
-//    println(emp1 === emp2)     //false
-
-    //Employee("a").printF("a")
+    println("${test.a}")
+    test = TestClass(20)
+    println("${test.a}")
+//    val testScore = TestScore()
+//    testScore.score =10;
+//    println(testScore.score)
+//    println("score")
 
 }
 
+class TestScore {
+    var score: Int = 12
+        get() {
+            return if (idNotNUll() && score <= 0)
+                0
+            else
+                score
+        }
+
+    fun idNotNUll(): Boolean {
+        return score != null
+    }
+}
 
 //    val list = listOf("one", "two", "three", "four")
 //    var list1 = list

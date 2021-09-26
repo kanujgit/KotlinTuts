@@ -4,25 +4,28 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Test {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("1");
-        list.add("2");
-        List<String> list1 = list;
-        list.forEach(System.out::print);
-        System.out.println("...");
-        list =null;
-        list1.forEach(System.out::print);
-        System.out.println("...");
-        list.forEach(System.out::print);
+        Scanner s = new Scanner(System.in);
+        //String name = s.nextLine();                 // Reading input from STDIN
+        //System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
 
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        int i = 0;
+        while (n-- > 0) {
+            arr[i++] = s.nextInt();
+        }
+        int hour = s.nextInt();
+
+        System.out.println(hour);
+        System.out.println(Arrays.toString(arr));
     }
 }
 
