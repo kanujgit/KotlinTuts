@@ -5,8 +5,8 @@ import kotlinx.coroutines.*
 
  fun main(args: Array<String>) = runBlocking{
 
-    // launchCoroutineScope()
-     function2("1")
+     launchCoroutineScope()
+     // function2("1")
 //===========================
 //    println("A")
 //    launch {
@@ -67,7 +67,8 @@ suspend fun launchCoroutineScope() {
                 println("Child coroutine end")
             }
             job2 =launch {
-                job1!!.join()
+                //job1!!.join()
+                delay(10000)
                 println("coroutine 2 start")
             }
         }
