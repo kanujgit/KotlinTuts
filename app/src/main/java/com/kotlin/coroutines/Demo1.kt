@@ -5,7 +5,17 @@ import kotlinx.coroutines.*
 
  fun main(args: Array<String>) = runBlocking{
 
-     launchCoroutineScope()
+     val job = launch {
+
+     }
+
+     val job2 = launch {
+         job.join()
+     }
+
+
+     //  launchCoroutineScope()
+     myFunction()
      // function2("1")
 //===========================
 //    println("A")
@@ -17,7 +27,7 @@ import kotlinx.coroutines.*
 //    }
 //    println("B")
 
-    //=============
+     //=============
 //   val job= launch {
 //
 //       function1()
@@ -25,16 +35,22 @@ import kotlinx.coroutines.*
 //           function1() }
 //        val resultTwo = withContext(Dispatchers.IO) { function2() }
 //    }
+ }
+
+suspend fun myFunction() {
+    println("Before")
+    delay(1000) // suspending
+    println("After")
 }
 
 fun function1() {
     for (i in 1..1000000)
-    print(".")
+        print(".")
     println()
 }
 
-fun function2(name:String) {
-    var name= "$name kumar"
+fun function2(name: String) {
+    var name = "$name kumar"
     println(name)
 }
 

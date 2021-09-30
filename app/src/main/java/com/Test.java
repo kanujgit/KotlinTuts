@@ -12,6 +12,7 @@ public class Test {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int[] nums = {1, 2, 3, 1, 1, 3};
+        int[] clone = nums.clone();
         HashMap<Integer, Integer> map = new HashMap();
         for (int n : nums
         ) {

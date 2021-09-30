@@ -16,6 +16,7 @@ lateinit var test: TestClass
 
 fun main(args: Array<String>) {
 
+
     println("${test.a}")
     test = TestClass(20)
     println("${test.a}")
