@@ -12,10 +12,6 @@ public class HashMapDemo {
 
         HashMap<HashMapObjectKey, String> map = new HashMap<>();
         HashMapObjectKey key = new HashMapObjectKey("anuj");
-        map.put(key, "kumar");
-        //    key.setName("pankaj");
-        System.out.println(map.get(key));
-        System.out.println("------");
 
     }
 }

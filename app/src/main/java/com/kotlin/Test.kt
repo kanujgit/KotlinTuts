@@ -5,21 +5,14 @@ private class xyx
 
 val myVal by lazy {
     println("Hello")
-    "wol"
     "world"
 }
 
-class TestClass(var a: Int = 10)
-
-lateinit var test: TestClass
-
-
 fun main(args: Array<String>) {
+    println(myVal)
+    println(myVal)
 
 
-    println("${test.a}")
-    test = TestClass(20)
-    println("${test.a}")
 //    val testScore = TestScore()
 //    testScore.score =10;
 //    println(testScore.score)

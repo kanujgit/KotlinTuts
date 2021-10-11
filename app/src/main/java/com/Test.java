@@ -1,28 +1,37 @@
 package com;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Scanner;
+import java.util.Map;
 
 public class Test {
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int[] nums = {1, 2, 3, 1, 1, 3};
-        String s1 = "anu a";
-        s1.split(" ");
-        int num = Arrays.stream(nums).max().getAsInt();
-        int[] clone = nums.clone();
-        HashMap<Integer, Integer> map = new HashMap();
-        for (int n : nums
-        ) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
-        }
+        int[][] a = {{1, 1}, {0, 0}};
+
+        Solution solution = new Solution();
     }
 }
+
+class Solution {
+    public int repeatedNTimes(int[] nums) {
+        int res = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            //map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            if (map.containsKey(nums[i])) {
+                res = nums[i];
+                break;
+            } else {
+                map.put(nums[i], 1);
+            }
+        }
+        // for (Map.Entry<Integer,Integer> entry : map.entrySet()){
+        //     if(entry.getValue()>1){
+        //         res =entry.getKey();
+        //     }
+        // }
+        return res;
+    }
+}
+
 
 

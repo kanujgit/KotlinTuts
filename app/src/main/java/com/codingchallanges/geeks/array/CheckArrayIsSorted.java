@@ -2,7 +2,7 @@ package com.codingchallanges.geeks.array;
 
 public class CheckArrayIsSorted {
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1, 1};
+        int[] arr = {1, 1, 1, 3};
         checkArrayIsSorted(arr, arr.length);
     }
 
@@ -11,8 +11,6 @@ public class CheckArrayIsSorted {
             if (arr[i] > arr[i + 1]) {
                 System.out.println("Array is not sorted");
                 return;
-            }else if(arr[i] ==arr[i+1]) {
-                continue;
             }
         }
         System.out.println("Array is sorted");

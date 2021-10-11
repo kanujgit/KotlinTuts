@@ -20,9 +20,11 @@ public class MergeSort {
             leftArr[i] = arr[i + l];
         for (int j = 0; j < n2; j++)
             rightArr[j] = arr[m + 1 + j];
+
         int i = 0;
         int j = 0;
         int k = l;
+
         while (i < n1 && j < n2) {
             if (leftArr[i] <= rightArr[j]) {
                 arr[k++] = leftArr[i++];
@@ -37,6 +39,7 @@ public class MergeSort {
         while (j < rightArr.length) {
             arr[k++] = rightArr[j++];
         }
+
         System.out.println(Arrays.toString(arr));
 
     }
