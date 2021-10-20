@@ -13,7 +13,7 @@ public class Test {
         Map<Integer, Integer> map = new HashMap<>();
         for (Map.Entry<Integer, Integer> entry : map.entrySet()
         ) {
-
+            System.out.println(entry.getValue());
         }
     }
 }
