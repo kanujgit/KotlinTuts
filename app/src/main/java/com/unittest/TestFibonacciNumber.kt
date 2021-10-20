@@ -13,7 +13,7 @@ object TestFibonacciNumber {
         var a = 0L
         var b = 1L
         var c = 1L
-        (1..n - 2).forEach {
+        (1..n - 2).forEach { _ ->
             c = a + b
             a = b
             b = c

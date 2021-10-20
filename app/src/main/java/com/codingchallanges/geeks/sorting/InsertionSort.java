@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 23, 2, 3, 4, 5};
+        int[] S = new int[arr.length];
+        S = Arrays.copyOf(arr, arr.length);
         insertionSort(arr, arr.length);
     }
 

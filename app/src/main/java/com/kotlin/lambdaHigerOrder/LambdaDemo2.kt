@@ -1,7 +1,7 @@
 package com.kotlin.lambdaHigerOrder
 
 fun main(args: Array<String>) {
-    var program = Program2();
+    var program = Program2()
 
 
 //    val myLambda : (Int,Int) -> Int={x,y ->x+y}
@@ -12,6 +12,8 @@ fun main(args: Array<String>) {
 
     //println(result)
 
+    program.addTwoNumber(1, 1) { item1, item2 -> item1 + item2 }
+
 }
 
 class Program2 {
@@ -20,7 +22,7 @@ class Program2 {
         b: Int,
         myLambda: (Int, Int) -> Int
     ) {  //Higher level functions with lambda
-        var result = myLambda(a, b)
+        val result = myLambda(a, b)
         println(result)
     }
 }
