@@ -6,9 +6,11 @@ import androidx.annotation.RequiresApi;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Given two integer arrays nums1 and nums2,
@@ -30,14 +32,14 @@ import java.util.Map;
 public class IntersectionArrayII {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main(String[] args) {
-        int[] arr1 = {4, 9, 5};
+        int[] arr1 = {4, 9, 5, 9};
         int[] arr2 = {9, 4, 9, 8, 4};
-        System.out.println(Arrays.toString(intersectHashMap(arr1, arr2)));
+        System.out.println(Arrays.toString(intersect(arr1, arr2)));
 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public static int[] intersect(int[] nums1, int[] nums2) {
+    /*public static int[] intersect(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         int i = 0, j = 0, k = 0;
@@ -52,6 +54,34 @@ public class IntersectionArrayII {
             }
         }
         return Arrays.copyOfRange(nums1, 0, k);
+
+    }*/
+    public static int[] intersect(int[] nums1, int[] nums2) {
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        int i = 0, j = 0, k = 0;
+        Set<Integer> set = new HashSet<>();
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] < nums2[j])
+                i++;
+            else if (nums1[i] > nums2[j])
+                j++;
+            else {
+                set.add(nums1[i++]);
+                j++;
+            }
+        }
+        System.out.println(set);
+        nums1 = new int[set.size()];
+        k = 0;
+        for (int l = 0; l < set.size(); l++) {
+
+        }
+        for (Integer num : set
+        ) {
+            nums1[k++] = num;
+        }
+        return nums1;
 
     }
 

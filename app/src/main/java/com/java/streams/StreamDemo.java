@@ -18,6 +18,7 @@ public class StreamDemo {
             list.add(i + "");
         }
 
+
         //list.stream().mapToInt(Integer::parseInt).toArray();
         List<Integer> integers = new ArrayList<>();
         integers = list.stream().map(it -> Integer.parseInt(it)).collect(Collectors.toList());

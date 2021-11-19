@@ -9,16 +9,10 @@ val myVal by lazy {
 }
 
 fun main(args: Array<String>) {
-    println(myVal)
-    println(myVal)
 
-
-//    val testScore = TestScore()
-//    testScore.score =10;
-//    println(testScore.score)
-//    println("score")
 
 }
+
 
 class TestScore {
     var score: Int = 12

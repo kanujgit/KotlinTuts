@@ -6,23 +6,27 @@ public class TreeTraversal {
     public static void main(String[] args) {
 
         BinaryTree tree = new BinaryTree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
+        tree.root = new Node(7);
+        tree.root.left = new Node(5);
+        tree.root.right = new Node(1);
+        tree.root.left.left = new Node(8);
+        tree.root.left.right = new Node(3);
+        tree.root.left.right = new Node(6);
+        tree.root.left.right = new Node(0);
+        tree.root.left.right = new Node(9);
+        tree.root.left.right = new Node(4);
+        tree.root.left.right = new Node(2);
 
-        System.out.println(
-                "Preorder traversal of binary tree is ");
-        tree.printPreOrder(tree.root);
-        System.out.println();
-        System.out.println(
-                "Preorder traversal of binary tree is iterative ");
-        tree.preOrderIterative(tree.root);
-
-
-        System.out.println();
-
+//        System.out.println(
+//                "Preorder traversal of binary tree is ");
+//        tree.printPreOrder(tree.root);
+//        System.out.println();
+//        System.out.println(
+//                "Preorder traversal of binary tree is iterative ");
+//        tree.preOrderIterative(tree.root);
+//
+//
+//        System.out.println();
 
 
         System.out.println(
@@ -33,17 +37,15 @@ public class TreeTraversal {
         tree.inOrderIterative(tree.root);
 
 
-
         System.out.println();
 
 
-
-        System.out.println(
-                "\nPostorder traversal of binary tree is ");
-        tree.printPostOrder(tree.root);
-        System.out.println(
-                "\nPostorder traversal of binary tree is  iterative");
-        tree.postOrderIterative(tree.root);
+//        System.out.println(
+//                "\nPostorder traversal of binary tree is ");
+//        tree.printPostOrder(tree.root);
+//        System.out.println(
+//                "\nPostorder traversal of binary tree is  iterative");
+//        tree.postOrderIterative(tree.root);
     }
 }
 

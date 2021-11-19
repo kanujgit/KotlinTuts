@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
     class UiHandler extends Handler {
+
         @Override
         public void handleMessage(@NonNull Message msg) {
             switch (msg.what) {

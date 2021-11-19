@@ -1,4 +1,4 @@
-package com.codingquestion;
+package com.codingquestion.string;
 
 public class AddTwoNumber {
     public static void main(String[] args) {
