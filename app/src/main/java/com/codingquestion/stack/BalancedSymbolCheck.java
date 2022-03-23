@@ -24,7 +24,7 @@ public class BalancedSymbolCheck {
         else
             System.out.println("Not Balanced ");
     }
-
+    
     static boolean areBracketsBalanced(String expr) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < expr.length(); i++) {

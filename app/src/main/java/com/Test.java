@@ -1,9 +1,31 @@
 package com;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
-        String num = addNumber("12", "1");
-        System.out.println(num);
+//        String num = addNumber("12", "1");
+//        System.out.println(num);
+        int[] arr ={22,1,34,22,16};
+        rearrange(arr);
+    }
+
+    private static void rearrange(int [] arr){
+        int x =22;
+        int n =arr.length;
+        int swapPosition = 0;
+        for (int i = 0; i <n ; i++) {
+            if(arr[i] == x){
+                arr[i] =1;
+            }
+            Arrays.sort(arr);
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    public static <T> void swap(int[] a, int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
     }
 
     private static String addNumber(String a, String b) {

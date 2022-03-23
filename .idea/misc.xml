@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16614583333333333" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.20092592592592592" />
+        <entry key="app/src/main/res/layout/demo.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ndk_layout.xml" value="0.16614583333333333" />
       </map>
     </option>

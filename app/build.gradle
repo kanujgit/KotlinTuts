@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdk 29
+    compileSdk 31
 //    dataBinding {
 //        enabled = true
 //    }
@@ -81,6 +81,12 @@ dependencies {
 
 
     implementation "io.reactivex.rxjava3:rxjava:3.0.13"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+
+   // implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
 
 
     implementation libraries
@@ -88,5 +94,10 @@ dependencies {
     kapt librariesKapt
     testImplementation testLibraries
     androidTestImplementation androidTestLibraries
+
+    // Add Dagger dependencies
+    implementation 'com.google.dagger:dagger:2.40.3'
+    kapt 'com.google.dagger:dagger-compiler:2.40.3'
+
 
 }

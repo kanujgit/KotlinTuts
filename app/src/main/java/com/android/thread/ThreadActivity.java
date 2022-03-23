@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.StrictMode;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.kotlintuts.BuildConfig;
 import com.kotlintuts.R;
 
 public class ThreadActivity extends Activity {
@@ -23,6 +25,8 @@ public class ThreadActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread);
+        editText = findViewById(R.id.edit_text);
+
 
         h1 = new Handler(Looper.getMainLooper()) {
             @Override
@@ -40,6 +44,14 @@ public class ThreadActivity extends Activity {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void enableThreadPolicy(){
+        if(BuildConfig.DEBUG){
+            StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder()
+                    .detectAll().penaltyLog().build();
+            StrictMode.setThreadPolicy(threadPolicy);
         }
     }
 }
