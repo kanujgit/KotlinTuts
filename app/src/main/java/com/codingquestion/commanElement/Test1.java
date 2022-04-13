@@ -1,10 +1,6 @@
 package com.codingquestion.commanElement;
 
-import android.os.Build;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -35,17 +31,14 @@ public class Test1 {
         this.b = b;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Test1)) return false;
         Test1 test1 = (Test1) o;
-        return Objects.equals(getA(), test1.getA()) &&
-                Objects.equals(getB(), test1.getB());
+        return Objects.equals(getA(), test1.getA()) && Objects.equals(getB(), test1.getB());
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int hashCode() {
         //return Objects.hash(getA(), getB());

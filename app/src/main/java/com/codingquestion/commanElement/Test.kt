@@ -1,13 +1,9 @@
 package com.codingquestion.commanElement
 
-import android.os.Build
-import androidx.annotation.RequiresApi
-import java.util.*
 import java.util.function.Predicate
 import java.util.stream.Collectors
 
 object Test {
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @JvmStatic
     fun main(args: Array<String>) {
         val listOne: ArrayList<Test1> = ArrayList()
@@ -27,9 +23,7 @@ object Test {
 //            System.out.println(obj.getA());
 //        }
         val setOne: Set<Test1> = HashSet(listOne)
-        val listCommon: List<Test1> = listTwo.stream()
-            .filter { o -> setOne.contains(o) }
-            .collect(Collectors.toList())
+        val listCommon: List<Test1> = listTwo.stream().filter { o -> setOne.contains(o) }.collect(Collectors.toList())
         for (obj: Test1 in listCommon) {
             println(obj.getA())
         }
@@ -47,13 +41,11 @@ object Test {
         return result
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     fun createSharedListViaStream(listOne: List<Test1>, listTwo: List<Test1>): List<Test1> {
         val listOneList: List<Test1> = listOne.stream().filter({ two: Test1 ->
             listTwo.stream()
                 .anyMatch(Predicate { one: Test1 -> (one.getA() == two.getA()) && (two.getB() == one.getB()) })
-        })
-            .collect(Collectors.toList())
+        }).collect(Collectors.toList())
         return listOneList
     }
 }

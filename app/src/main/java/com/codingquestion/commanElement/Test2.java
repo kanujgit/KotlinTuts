@@ -1,9 +1,5 @@
 package com.codingquestion.commanElement;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
 import java.util.Objects;
 
 public class Test2 {
@@ -33,7 +29,6 @@ public class Test2 {
         this.b = b;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,7 +38,6 @@ public class Test2 {
                 Objects.equals(getB(), test1.getB());
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int hashCode() {
         return Objects.hash(getA(), getB());
