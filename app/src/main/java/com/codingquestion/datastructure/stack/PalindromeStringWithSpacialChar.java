@@ -1,5 +1,6 @@
 package com.codingquestion.datastructure.stack;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
