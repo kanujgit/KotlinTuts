@@ -12,6 +12,7 @@ public class ReverseLikList {
 
         System.out.println("Given Linked list");
         list.printList(head);
+
         head = reverse(head);
         System.out.println();
         System.out.println("Reversed linked list ");

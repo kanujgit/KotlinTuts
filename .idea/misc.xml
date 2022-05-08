@@ -6,8 +6,23 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16614583333333333" />
+        <entry key="app/src/main/res/layout/activity_main1.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.20092592592592592" />
         <entry key="app/src/main/res/layout/demo.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_exercise_1.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_2.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_3.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_4.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_5.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_6.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_8.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise_9.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_loop_iterations_demo.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/layout/fragment_premium_customer.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_viewmodel_demo.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/list_item_screen_reachable_from_home.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/ndk_layout.xml" value="0.16614583333333333" />
       </map>
     </option>

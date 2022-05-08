@@ -4,7 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,9 +25,18 @@ public class ActivityDemo extends AppCompatActivity {
 
     private DemoViewModel demoViewModel;
 
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+
+            wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
         demoViewModel = ViewModelProviders.of(this,
                 new DemoViewModelFactory(""))
@@ -33,6 +47,29 @@ public class ActivityDemo extends AppCompatActivity {
         bundle.putString("key", "");
         new Activity().setResult(Activity.RESULT_OK, intent);
         new Activity().finish();
+
+        EditText editText ;
+        MyWatcher myWatcher = new MyWatcher();
+    }
+
+
+    class MyWatcher implements TextWatcher{
+
+        private EditText editText;
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            editText.addTextChangedListener(this);
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
     }
 
     private void shareContact(Intent intent){

@@ -6,14 +6,14 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 30
 //    dataBinding {
 //        enabled = true
 //    }
     defaultConfig {
         applicationId "com.kotlintuts"
         minSdk 21
-        targetSdk 31
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -98,6 +98,10 @@ dependencies {
     // Add Dagger dependencies
     implementation 'com.google.dagger:dagger:2.40.3'
     kapt 'com.google.dagger:dagger-compiler:2.40.3'
+
+    //techyourchance package
+    implementation 'com.ncapdevi:frag-nav:3.3.0'
+    implementation 'com.techyourchance.threadposter:threadposter:0.8.3'
 
 
 }

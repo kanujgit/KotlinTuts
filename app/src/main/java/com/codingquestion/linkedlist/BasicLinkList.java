@@ -10,12 +10,6 @@ public class BasicLinkList<T> {
         this.last = null;
     }
 
-
-
-
-
-
-
     private class Node{
         private Node nextNode;
         private T nodeItem;
@@ -37,7 +31,6 @@ public class BasicLinkList<T> {
             return nodeItem;
         }
 
-        
     }
 
 }
