@@ -30,3 +30,10 @@ object Singleton : SuperClass(){
     }
 }
 
+/*
+init block execute
+get singleton
+my methods
+child my methods
+
+ */

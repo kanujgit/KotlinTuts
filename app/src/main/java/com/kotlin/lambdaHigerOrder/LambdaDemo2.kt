@@ -27,6 +27,37 @@ class Program2 {
     }
 }
 
+fun main() {
+    val p = Program2().addTwoNumber(1,2){ item1,item2 ->item1+item2}
+}
+
+fun List<*>.concatAndAdd():Any{
+
+    var sum:Int = 0
+    var concat = ""
+
+    for (item in this){
+        when(item){
+        is Int -> {
+            sum += item
+        }
+            is String -> {
+                concat += item
+            }
+        }
+    }
+    return concat.ifEmpty { return sum }
+}
+
+sealed class Resource{
+    object Loading : Resource()
+
+    data class Success(val data:Any):Resource()
+
+}
+
+
+
 
 /*
 * class Program2 {

@@ -7,17 +7,17 @@ import java.util.Queue;
 
 public class NumberOfIslands {
     public static void main(String[] args) {
-        int V = 5;
+        int V = 7;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(V);
         for (int i = 0; i < V; i++)
             adj.add(new ArrayList<Integer>());
         addEdge(adj,0,1);
         addEdge(adj,0,2);
-        addEdge(adj,1,2);
         addEdge(adj,2,3);
         addEdge(adj,1,3);
-        addEdge(adj,3,4);
-        addEdge(adj,2,4);
+        addEdge(adj,4,5);
+        addEdge(adj,5,6);
+        addEdge(adj,4,6);
 
         System.out.println("Following is Breadth First Traversal: ");
         BFSDistance(adj,V);
@@ -47,7 +47,6 @@ public class NumberOfIslands {
 
         while (!queue.isEmpty()){
             int u = queue.poll();
-            System.out.print(u +" ");
             for (int v :adj.get(u)) {
                 if(!visited[v]){
                     visited[v] = true;

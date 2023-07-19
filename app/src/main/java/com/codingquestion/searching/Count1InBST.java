@@ -1,19 +1,20 @@
 package com.codingquestion.searching;
 
-import com.codingquestion.arrays.UtilsClass;
+
+import java.util.Arrays;
 
 public class Count1InBST {
     public static void main(String[] args) {
         int[] arr = {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2};
-        int x = 0;
-        // findOccurrence(arr, x);
+        int x = 2;
+         findOccurrence(arr, x);
 
 
         int[] changeArr = new int[3];
         for (int i = 0; i < 3; i++) {
-            changeArr[i] = calculateNumberChangingPosition(arr, i);
+          //  changeArr[i] = calculateNumberChangingPosition(arr, i);
         }
-        UtilsClass.printArray(changeArr);
+      //  System.out.println(Arrays.toString(changeArr));
 
     }
 

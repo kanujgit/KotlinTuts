@@ -8,6 +8,7 @@ public class StringRegex {
 	public static void main(String[] args) {
 		String str="AnujKume!23.434";
 		String regex = "[^A-Za-z0-9]";
+		str.substring(1,3);
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(str);
 		

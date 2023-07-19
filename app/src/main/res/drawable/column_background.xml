@@ -1,0 +1,8 @@
+<!-- column_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The color you want for the column background -->
+    <item android:drawable="@android:color/holo_green_light" />
+
+    <!-- Use an InsetDrawable to add space between cells (optional) -->
+    <item android:left="1dp" android:right="1dp" android:drawable="@android:color/transparent" />
+</layer-list>

@@ -3,8 +3,8 @@
         package="com.kotlintuts">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <!--android:name="com.di.cardemo.App"-->
     <application
             android:name="com.techyourchance.coroutines.MyApplication"
             android:allowBackup="true"
@@ -13,49 +13,73 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.KotlinTuts">
-
-        <!--techyourchance-->
         <activity
-                android:name="com.techyourchance.coroutines.MainActivity"
-                android:windowSoftInputMode="adjustResize">
+                android:name="com.android.ticktactoe.TicTacToeActivity"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- techyourchance -->
+        <!-- <activity -->
+        <!-- android:name="com.techyourchance.coroutines.MainActivity" -->
+        <!-- android:windowSoftInputMode="adjustResize"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.rxandorid.rxsyntax.RxSyntaxActivity" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+                android:name="com.coroutines.flow.FlowActivity"
+                android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-        <!--        <activity-->
-        <!--            android:name="com.rxandorid.rxsyntax.RxSyntaxActivity"-->
-        <!--            android:exported="true">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.MAIN" />-->
-
-        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-        <!--            </intent-filter>-->
-        <!--        </activity>-->
-
-        <!--  <activity
-              android:name="com.android.thread.ThreadActivity"
-              android:exported="true"
-                  >
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
-
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-          </activity>-->
-
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity
                 android:name="com.ndk.NdkDemo"
                 android:exported="true" />
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity
+                android:name="com.android.custumview.CustumDemoActivity"
+                android:exported="true">
 
-        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-        <!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+                android:name="com.android.lifecycle.activity.Activity1"
+                android:exported="true">
+<!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
+                android:name="com.android.lifecycle.activity.Activity2"
+                android:exported="true" />
+        <activity
+                android:name="com.android.lifecycle.activity.Activity3"
+                android:exported="true"
+                android:launchMode="singleInstance" />
     </application>
 
 </manifest>

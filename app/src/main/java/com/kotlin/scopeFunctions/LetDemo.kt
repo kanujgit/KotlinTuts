@@ -21,31 +21,12 @@ package com.kotlin.scopeFunctions
 class LetDemo
 
 fun main(args: Array<String>) {
-//    val name: String? = "null"
-//    var length = name?.let {
-//        // code won't we executed
-//        println(it.reversed())
-//        println(it.capitalize(Locale.ROOT))
-//        println(it.length)
-//        it.length
-//    }
-//
-//    println(length)
+    performLetOperation()
+}
 
-    var name:String?=null
-    name = "anuj"
-    // also checking for null safety
-    val length = name.let {
-        it.reversed()
-//        println(it.length)
+private fun performLetOperation() {
+    val person = Person().let {
+        "The name of the Person is: ${it.name}"
     }
-    println(length)
-
-    val numbers = mutableListOf("One", "Two", "Three", "Four", "Five")
-    val list = numbers.map { it.length }.filter { it > 3 }.let {
-        print("$it")
-        it
-    }
-    print(list)
-
+    print(person)
 }

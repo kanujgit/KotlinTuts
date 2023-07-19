@@ -5,8 +5,12 @@ fun main(args: Array<String>) {
 
     var myLambda: (Int) -> Unit = { s: Int -> println(s) }    // lambda expression as a functions
     program.addTwoNumber(3, 2,myLambda);
+    higherOrderDemo("anuj", { s:String -> println(s) })
 
+}
 
+fun higherOrderDemo(s:String, call: (String) ->Unit){
+    call(s)
 }
 
 class Program {

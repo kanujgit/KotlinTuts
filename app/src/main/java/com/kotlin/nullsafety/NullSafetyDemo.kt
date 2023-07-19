@@ -1,5 +1,8 @@
 package com.kotlin.nullsafety
 
+object Util{
+
+}
 fun main(args: Array<String>) {
 
     val name: String? ="null";

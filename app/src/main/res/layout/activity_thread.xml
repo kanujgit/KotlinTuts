@@ -6,9 +6,9 @@
 
     <EditText
         android:id="@+id/edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+            android:layout_margin="16dp"
         android:text="Enter user name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

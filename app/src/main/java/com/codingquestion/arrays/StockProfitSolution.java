@@ -9,7 +9,7 @@ package com.codingquestion.arrays;
  */
 public class StockProfitSolution {
     public static void main(String[] args) {
-        int arr[] = {6,5,3,7,1,4};
+        int arr[] = {0};
         System.out.println(calculatePrice(arr, arr.length));
         maxProfit(arr,arr.length);
     }

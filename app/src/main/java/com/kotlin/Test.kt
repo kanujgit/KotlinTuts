@@ -1,51 +1,27 @@
 package com.kotlin
 
-
-private class xyx
-
-val myVal by lazy {
-    println("Hello")
-    "world"
-}
-
 fun main(args: Array<String>) {
+      var user1 =User("anuj",1);
+      var user2 =User("anuj",1);
 
+
+      if(user1 == user2){
+            println("Equal")
+          }else{
+            println("Not Equal")
+          }
+//output : Equal
 
 }
 
 
-class TestScore {
-    var score: Int = 12
-        get() {
-            return if (idNotNUll() && score <= 0)
-                0
-            else
-                score
-        }
+class User(var name:String,var id :Int)
 
-    fun idNotNUll(): Boolean {
-        return score != null
-    }
-}
 
-//    val list = listOf("one", "two", "three", "four")
-//    var list1 = list
-//    println(list1)
-//    println(list1)
-//    println(list)
+//only contain of var or val
+data class UserData(var name:String,var id :Int)
+
+
 //
-//
-//    var x = lazy { 20 }
 
-
-//}
-
-class Employee(val name: String) {
-
-    fun printF(a: String) {
-        print(a)
-    }
-}
-
-
-
+////only contain of var or val

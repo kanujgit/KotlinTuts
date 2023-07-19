@@ -46,6 +46,7 @@ public class DetectCycleUndirectedGraph_DFS {
                 if (dfsRec(adj, u, visited, s))
                     return true;
             } else if (u != parent) {
+                System.out.println(u);
                 return true;
             }
         }

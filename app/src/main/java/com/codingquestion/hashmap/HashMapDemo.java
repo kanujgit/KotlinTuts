@@ -4,18 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HashMapDemo {
+
     public static void main(String[] args) {
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        hm.put(1, 1);
-        hm.put(2, 2);
-        System.out.println(hm.hashCode());
-        for (int i = 0; i <5; i++) {
-            hm.getOrDefault(i,0);
+        //HashMap<Integer, Integer> hm = new HashMap<>();
+        for (int i = 0; true; i++) {
+            System.out.println("d");
+            break;
         }
-        for (Map.Entry<Integer, Integer> e : hm.entrySet()
-        ) {
-            System.out.println("key : "+e.hashCode() +"\t and value :"+e.getValue());
-        }
+//        for (int i = 0; i <5; i++) {
+//            hm.getOrDefault(i,0);
+//        }
+//        for (Map.Entry<Integer, Integer> e : hm.entrySet()
+//        ) {
+//            System.out.println("key : "+e.hashCode() +"\t and value :"+e.getValue());
+//        }
     }
 
     @Override

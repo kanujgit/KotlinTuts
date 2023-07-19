@@ -1,0 +1,8 @@
+<!-- grid_border_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+    <solid android:color="@android:color/white" /> <!-- Background color -->
+    <stroke
+            android:width="3dp"
+            android:color="@android:color/black" /> <!-- Border color -->
+</shape>
